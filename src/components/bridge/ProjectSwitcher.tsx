@@ -33,7 +33,7 @@ export function ProjectSwitcher({
               className={cn(
                 "group inline-flex h-9 shrink-0 items-center gap-2 rounded-full border px-3 text-[13px] font-medium transition-all duration-200",
                 active
-                  ? "border-gpt/40 bg-gpt/12 text-gpt shadow-[0_0_0_3px_var(--color-gpt)/8]"
+                  ? "border-gpt/40 bg-gpt/10 text-gpt ring-2 ring-gpt/15"
                   : "border-border bg-surface text-muted-foreground hover:border-border hover:bg-surface-2 hover:text-foreground",
               )}
             >
