@@ -12,7 +12,7 @@ const STORAGE_KEY = "bridge.activeProject";
 
 export function BridgeShell() {
   const [projects, setProjects] = useState<Project[]>(PROJECTS);
-  const [activeId, setActiveId] = useState(PROJECTS[0].id);
+  const [activeId, setActiveId] = useState(PROJECTS[0]!.id);
   const [feeds, setFeeds] = useState<Record<string, ChatMessage[]>>(FEEDS);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export function BridgeShell() {
   }, []);
 
   const active = useMemo(
-    () => projects.find((p) => p.id === activeId) ?? projects[0],
+    () => projects.find((p) => p.id === activeId) ?? projects[0]!,
     [projects, activeId],
   );
 
